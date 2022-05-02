@@ -200,6 +200,20 @@ namespace PudelkoLibrary
 
             return sizes.Count == 3 ? new Pudelko(sizes[0], sizes[1], sizes[2]) : throw new FormatException($"Incorrect format: {input}");
         }
+        public static int Comparison(Pudelko p1, Pudelko p2)
+        {
+            var p1Suma = p1.A + p1.B + p1.C;
+            var p2Suma = p2.A + p2.B + p2.C;
+
+            if (p1.Objetosc < p2.Objetosc) return -1;
+            if (p1.Objetosc > p2.Objetosc) return 1;
+            if (p1.Pole < p2.Pole) return -1;
+            if (p1.Pole > p2.Pole) return 1;
+            if (p1Suma < p2Suma) return -1;
+            if (p1Suma > p2Suma) return 1;
+
+            return 0;
+        }
     }
 
 }

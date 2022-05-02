@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using static PudelkoLibrary.UnitOfMeasure;
+using static PudelkoLibrary.Kompresja;
 
 
 namespace PudelkoLibrary
@@ -15,8 +16,6 @@ namespace PudelkoLibrary
                 new Pudelko(2.5, 9.321, 1, UnitOfMeasure.meter),
                 new Pudelko(5, 4.7, 2.3, UnitOfMeasure.centimeter),
                 new Pudelko(5, 9, 3, UnitOfMeasure.milimeter),
-                
-               // new Pudelko(840.2, 590, 900, UnitOfMeasure.milimeter).Kompresuj(),
             };
 
             Console.WriteLine("Pudelka:");
@@ -61,26 +60,36 @@ namespace PudelkoLibrary
             Console.WriteLine("-----------------------------");
 
 
-            Console.WriteLine("\n====Pudelka Posortowane====");
-            /* var sortedList = lista
-               .OrderBy(n => n.Objetosc)
-               .ThenBy(n => n.Pole)
-               .ThenBy(n => n.A + n.B + n.C)
-               .ToList();
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Tworzenie pudelka przez '+':");
+            Console.WriteLine("---");
+            Console.WriteLine(pudelko1 + pudelko3);
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine();
 
+            var pudelko4 = new Pudelko(6, 5, 2);
+            var pudelko5 = new Pudelko(2, 10, 5);
+            var pudelko6 = new Pudelko(5, 9.999, 1.1);
 
-             foreach (var pudelko in sortedList)
-                 Console.WriteLine(pudelko.ToString());
-               */
+            var listaPudelek = new List<Pudelko> { pudelko4, pudelko5, pudelko6 };
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Skompresowane pudelko:");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine(Kompresuj(pudelko1));
+
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Posortowana lista:");
             
+            listaPudelek.Sort(Pudelko.Comparison);
+            foreach (var i in listaPudelek)
+            {
+                Console.WriteLine(i); 
+            }
+            Console.WriteLine("-----------------------------");
 
-           
 
-            
 
-            Console.WriteLine("===========Compare===========");
-           // Console.WriteLine(box1.CompareTo(box1));
-           // Console.WriteLine(box1.CompareTo(box3));
         }
     }
 }
