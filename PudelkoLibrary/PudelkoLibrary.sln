@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PudelkoLibrary", "PudelkoLibrary\PudelkoLibrary.csproj", "{2E4D9C79-02E0-41BD-93ED-44B34296689B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PudelkoLibrary", "PudelkoLibrary\PudelkoLibrary.csproj", "{2E4D9C79-02E0-41BD-93ED-44B34296689B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestPudelko", "UnitTestPudelko\UnitTestPudelko.csproj", "{AD3033C4-3F29-4DC1-96D8-ECD68FE69123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app", "app\app.csproj", "{F441EC57-A063-4DD5-8F10-5E4A7E244647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{2E4D9C79-02E0-41BD-93ED-44B34296689B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4D9C79-02E0-41BD-93ED-44B34296689B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4D9C79-02E0-41BD-93ED-44B34296689B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD3033C4-3F29-4DC1-96D8-ECD68FE69123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3033C4-3F29-4DC1-96D8-ECD68FE69123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3033C4-3F29-4DC1-96D8-ECD68FE69123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3033C4-3F29-4DC1-96D8-ECD68FE69123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F441EC57-A063-4DD5-8F10-5E4A7E244647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F441EC57-A063-4DD5-8F10-5E4A7E244647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F441EC57-A063-4DD5-8F10-5E4A7E244647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F441EC57-A063-4DD5-8F10-5E4A7E244647}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

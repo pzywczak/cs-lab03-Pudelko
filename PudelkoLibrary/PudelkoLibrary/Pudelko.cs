@@ -61,6 +61,64 @@ namespace PudelkoLibrary
             tab = new double[] { A, B, C };
             _unit = unit;
         }
+        public Pudelko(double a, double b, UnitOfMeasure unit = UnitOfMeasure.meter)
+        {
+
+            if ((a > 0) && (a / (double)unit <= 10.0))
+            {
+                length = a / (double)unit;
+            }
+            else 
+            {
+                throw new ArgumentOutOfRangeException(a.ToString());
+            }
+
+            if ((b > 0) && (b / (double)unit <= 10.0))
+            {
+                width = b / (double)unit;
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException(b.ToString());
+            }
+
+            if (A == 0 || B == 0)
+                throw new ArgumentOutOfRangeException();
+
+            height = 0.1;
+
+            tab = new double[] { A, B, C };
+            _unit = unit;
+        }
+
+        public Pudelko(double a, UnitOfMeasure unit = UnitOfMeasure.meter)
+        {
+            if ((a > 0) && (a / (double)unit <= 10.0))
+            {
+                length = a / (double)unit;
+            }
+
+            if (A == 0)
+                throw new ArgumentOutOfRangeException();
+
+            width = 0.1;
+            height = 0.1;
+
+            tab = new double[] { A, B, C };
+            _unit = unit;
+        }
+
+        public Pudelko(UnitOfMeasure unit)
+        {
+            length = 0.1;
+            width = 0.1;
+            height = 0.1;
+
+            tab = new double[] { A, B, C };
+            _unit = unit;
+        }
+
+        public Pudelko() : this(0.1, 0.1, 0.1, UnitOfMeasure.meter) { }
 
         public override string ToString()
         {
